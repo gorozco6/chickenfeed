@@ -25,9 +25,9 @@ So we'll use templatesRMD Cat Numerical, look for the section that has an 'aov'
 
 <!-- This question is like a bunch of t-tests, but instead of doing the t-test a bunch of times we use ANOVA to do all the comparisons at once!  !-->
 
-$$H_0$$ The variables feed, speed,and gender have no effect on chicken weight.
+$$H_0$$The variables feed, speed,and gender have no effect on chicken weight.  
 
-$$H_A$$ At least one of the variables affect the chicken weight.
+$$H_A$$At least one of the variables affect the chicken weight.  
 
 ### get the data
 
@@ -59,7 +59,7 @@ It appears that there is no relationship between weight and speed.
 plot(weight~sex,data=chickenData)
 ```
 
-
+There seems to be a relationship between gender and weight.
 
 ### Numerical summary
 
@@ -72,11 +72,14 @@ This is a summary of all the data in chickenData.
 ### Inference -- Analysis of Variance
 
 ```{r}
-model1 = lm(weight~feed+sex, data=chickenData)
+model1 = lm(weight~feed+speed+sex, data=chickenData)
+anova(model1)
 ```
+
+This is my conclusion.
 
 ###  Conclusions  -- which variables affect chicken weight?
 
-
+Feed is the only on below 0.05.
 
 
