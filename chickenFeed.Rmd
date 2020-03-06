@@ -63,7 +63,10 @@ plot(weight~sex,data=chickenData)
 
 ### Numerical summary
 
-
+```{r}
+summary(chickenData)
+```
+This is a summary of all the data in chickenData.
 
 
 ### Inference -- Analysis of Variance
