@@ -71,7 +71,9 @@ This is a summary of all the data in chickenData.
 
 ### Inference -- Analysis of Variance
 
-
+```{r}
+model1 = lm(weight~feed+sex, data=chickenData)
+```
 
 ###  Conclusions  -- which variables affect chicken weight?
 
