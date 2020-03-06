@@ -25,6 +25,10 @@ So we'll use templatesRMD Cat Numerical, look for the section that has an 'aov'
 
 <!-- This question is like a bunch of t-tests, but instead of doing the t-test a bunch of times we use ANOVA to do all the comparisons at once!  !-->
 
+$$H_0$$ The variables feed, speed,and gender have no effect on chicken weight.
+
+$$H_A$$ At least one of the variables affect the chicken weight.
+
 ### get the data
 
 ```{r}
@@ -43,8 +47,22 @@ boxplot of weight bsed on feed
 plot(weight~feed,data=chickenData)
 ```
 
+It appears that the feed type has an effect. Sunflower is the best.
+
+```{r}
+plot(weight~speed,data=chickenData)
+```
+
+It appears that there is no relationship between weight and speed.
+
+```{r}
+plot(weight~sex,data=chickenData)
+```
+
+
 
 ### Numerical summary
+
 
 
 
